@@ -11,11 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 public class MyErrorController implements ErrorController  {
-	Logger logger = Logger.getLogger(MyErrorController.class.getName());
 
     @RequestMapping("/error")
     public String handleError() {
-    	logger.error("error occurred");
         return "hello";
     }
  
